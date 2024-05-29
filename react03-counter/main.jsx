@@ -19,8 +19,11 @@ function Counter({setModalMsg}) {
   
   const updateCounter = (n) => {
     if (count + n < 0) {
+      // not in a good way 
       setModalMsg('cannot under 0')
       setTimeout( ()=> setModalMsg(''), 2000)
+      // should use useEffect for clear timeout in heap
+      // https://chatgpt.com/share/72758973-dd21-49d0-ac43-a5fc930c4e12
       return;
     }
     setCount(prv=>prv+n);
