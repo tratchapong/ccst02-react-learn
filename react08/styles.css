@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-block: 1rem;
+}
