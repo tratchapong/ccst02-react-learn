@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+button, span, input {
+  font-size: 40px;
+  padding: 3px 16px;
+  border: 1px solid #ddd;
+}
