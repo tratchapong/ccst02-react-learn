@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "andy",
+      "password": "a1234",
+      "email": "andy@yahoo.com"
+    },
+    {
+      "id": "2",
+      "name": "bobby",
+      "password": "b1234",
+      "email": "bobby@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "candy",
+      "password": "c1234",
+      "email": "candy@gmail.com"
+    },
+    {
+      "id": "4",
+      "name": "dola223",
+      "password": "d1234",
+      "email": "danny@gmail.com"
+    },
+    {
+      "id": "5ed3",
+      "name": "gary",
+      "password": "g1234",
+      "email": "gary@fdfdfd"
+    },
+    {
+      "id": "0185",
+      "name": "harry",
+      "password": "h1234",
+      "email": "harry@rrrr"
+    }
+  ]
+}

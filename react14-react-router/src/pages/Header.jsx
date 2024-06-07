@@ -24,6 +24,9 @@ function Header() {
         <Link to='/about'>About</Link>
         <Link to='/contact'>Contact</Link>
         <Link to='/private'>Private</Link>
+        <Link to='/users'>Users</Link>
+        <Link to='/register'>Register</Link>
+        <Link to='/login'>Login</Link>
         <input type="number" value={id} onChange={hdlChangeId} />
         <Link to={`/product/${id}`}>Product by id</Link>
       </nav>

@@ -14,6 +14,7 @@ function App() {
     console.log("fetchdata...");
     const fetchData = async () => {
       try {
+        setLoading(true)
         const res = await fetch("https://dummyjson.com/users?limit=10");
         const data = await res.json();
         console.log(data);

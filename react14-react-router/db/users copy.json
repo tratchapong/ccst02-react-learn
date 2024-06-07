@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "andy",
+      "password": "a1234",
+      "email": "andy@yahoo.com",
+      "number": "08100000000"
+    },
+    {
+      "id": 2,
+      "name": "bobby",
+      "password": "b1234",
+      "email": "bobby@gmail.com",
+      "number": "08111111111"
+    },
+    {
+      "id": 3,
+      "name": "candy",
+      "password": "c1234",
+      "email": "candy@gmail.com",
+      "number": "09022222222"
+    },
+    {
+      "id": 4,
+      "name": "danny",
+      "password": "d1234",
+      "email": "danny@gmail.com",
+      "number": "09033333333"
+    }
+  ]
+}
