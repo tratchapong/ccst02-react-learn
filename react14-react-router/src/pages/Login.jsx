@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from 'axios'
+import AuthContext from "../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 
 function Login() {
+  const navigate = useNavigate()
+  const {setIsLogin, setUser} = useContext(AuthContext)
   const [input, setInput] = useState({
     name: "",
     password: ""
@@ -15,7 +19,18 @@ function Login() {
   const hdlSubmit = async (e) => {
     e.preventDefault();
     try {
-
+      const res = await axios.get(`http://localhost:8000/users?name=${input.name}`)
+      if(!res.data.length) {
+        return alert('invalid login')
+      }
+      const foundUser = res.data[0]
+      if(foundUser.password !== input.password ) {
+        return alert('invalid login')
+      }
+      localStorage.setItem('user',JSON.stringify(foundUser))
+      setUser(foundUser)
+      setIsLogin(true)
+      navigate('/private')
     }catch(error) {
       console.log(error.message)
     }

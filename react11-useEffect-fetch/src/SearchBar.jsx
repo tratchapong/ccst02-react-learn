@@ -10,12 +10,6 @@ function SearchBar({ filterText, setFilterText }) {
     }
   },[inputText] )
 
-  // const hdlChange = async e => {
-  //   setFilterText(e.target.value)
-  //   const res = await fetch('http://dummyjson.com/users/search?q=John')
-  //   const data = await res.json()
-
-  // }
 
   return (
     <div>

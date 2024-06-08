@@ -21,7 +21,7 @@ function Product() {
 
   return (
     <>
-      {console.log("Loading-Error : ", loading, error)}
+      {/* {console.log("Loading-Error : ", loading, error)} */}
       {loading && <h1>Loading...</h1>}
       {!!error && <h1>{error.message}</h1>}
       {!loading && !error && (
