@@ -29,7 +29,7 @@ function Register() {
       }
       const res = await axios.post('http://localhost:8000/users', body)
       console.log(res)
-      navigate('/users')
+      navigate('/login')
     } catch (error) {
       console.log(error.message)
     }
