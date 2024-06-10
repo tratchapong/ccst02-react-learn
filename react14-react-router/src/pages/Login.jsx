@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import {useNavigate} from 'react-router-dom'
 import axios from 'axios'
+import AuthContext from "../contexts/AuthContext";
 
 
 function Login() {
+  const navigate = useNavigate()
+  const {setUser, setIsLogin} = useContext(AuthContext)
   const [input, setInput] = useState({
     name: "",
     password: ""
@@ -15,6 +19,23 @@ function Login() {
   const hdlSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Login
+      // check ว่ามี username ที่ input มานั้น ใน db หรือไม่
+      const res = await axios.get(`http://localhost:8000/users?name=${input.name}`)
+      if(!res.data.length) {
+        return alert('Invalid Login')
+      }
+      const foundUser = res.data[0]
+      // check password ว่าตรงกับ input.password หรือไม่
+      if( foundUser.password !== input.password) {
+        return alert('Invalid Login')
+      }
+      // เก็บค่า user ที่ login ไว้ที่ AuthContext:user / localStorage
+      localStorage.setItem('user', JSON.stringify(foundUser))
+      setUser(foundUser)
+      setIsLogin(true)
+
+      navigate('/private')
 
     }catch(error) {
       console.log(error.message)
